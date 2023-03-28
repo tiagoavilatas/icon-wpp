@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>botão flutuante com formulário</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      
+      /* Estilo do botão e da div do formulário */
+      .botao-flutuante {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        padding: 0px;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.5s;
+      }
+
+      .botao-flutuante:hover {
+        background-color: #32cd32;
+      }
+
+      #form-container {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        transition: right 0.5s ease-in-out;
+        z-index: 9999;
+        padding: 20px;
+      }
+
+      /* Estilo dos campos do formulário */
+      input[type='text'],
+      input[type='tel'],
+      input[type='submit'] {
+        display: block;
+        margin-bottom: 10px;
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type='submit'] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+
+     
+      }
+    </style>
+  </head>
+
+
+  <body>
+    
+    <!-- Inicio botão Whatsapp - Tiago Tas - tasmb5@gmail.com - LP00-->
+    <button class="botao-flutuante" id="botao-flutuante"
+    
+      href="https://wa.me/+5551999940135?text=Olá, gostaria de mais informações sobre o produto/serviço."
+      
+    >
+      <img
+        src="https://cdn.awsli.com.br/1997/1997501/arquivos/whatsapp.svg"
+        width="60"
+        height="60"
+        alt="Fale Conosco pelo WhatsApp"
+      />
+    </a>
+    
+    <!-- fim botão WhatsApp -->
+  </button>
+  
+
+    <!-- Div do formulário -->
+  
+    <div id="form-container">
+      <form action="https://script.google.com/macros/s/AKfycbyehfEBhr4aFJwsJRmQxZa_JNH04Dcl69dObYevI0iqurQgVdo0gh2fk1T0pMwhn7kp/exec" method='POST'>
+             
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" />
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" />
+        <input type="submit" id="enviar" value="Enviar" />        
+        <form id="myForm" onsubmit="sendData(); return true;">
+        
+                
+      </form>
+    </div>
+    
+
+    <!-- Script para animação do formulário -->
+    <script>
+      var botaoFlutuante = document.getElementById('botao-flutuante')
+      var formContainer = document.getElementById('form-container')
+
+      botaoFlutuante.addEventListener('click', function () {
+        formContainer.style.right = '0'
+      })
+      {       
+        document.getElementById("enviar").addEventListener("click", function() {
+
+  // Obtenha os valores dos campos de nome e telefone do formulário
+  var nome = document.getElementById("nome").value;
+  var telefone = document.getElementById("telefone").value;
+              
+  // Abra a janela do WhatsApp
+  window.open("https://wa.me/+5551999940135");
+    });        
+
+    }
+    
+    
+    </script>  
+   
+   
+ 
+  </body>
+</html>
+
+
+
