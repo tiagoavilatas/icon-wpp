@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--Configuração do mediaquery-->
+    
     <title>botão flutuante com formulário</title>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js">
      </script>
     <style>
       
-      /* Estilo do botão e da div do formulário */
+/* Estilo do botão e da div do formulário */
       .botao-flutuante {
         position: fixed;
         bottom: 20px;
@@ -23,7 +28,7 @@
         background-color: #32cd32;
       }
 
-      /* Estilo dos campos do formulário */
+/* Estilo dos campos do formulário */
     input[type='text'],
     input[type='tel'],
     input[type='submit'] {
@@ -48,10 +53,10 @@
         background-color: #128c7e;
 }
 
-      /* Estilo dos campos do formulário */
+/* Estilo dos campos do formulário */
     #form-container {
       position: fixed;
-      top: 45%;
+      top: 40%;
       right: -350px;
       width: 250px;
       height: 33%;
@@ -75,11 +80,28 @@
       height: 10%;
       text-align: center;
 }
+    
+@media (max-width: 768px) {
+      #form-container {
+      position: fixed;
+      top: 65%;
+      right: -350px;
+      width: 250px;
+      height: 20%;
+      background: linear-gradient(to bottom, #128c7e 30%, #f2f2f2 30%);
+      border-radius: 5%;
+      transition: right 0.5s ease-in-out;
+      z-index: 9999;
+      padding: 20px;
+
+  }
+} 
+
    </style>
   </head>
   <body>
     
-    <!-- Inicio botão Whatsapp -->
+<!-- Inicio botão Whatsapp -->
     <button class="botao-flutuante" id="botao-flutuante"    
       href="https://wa.me/+5551999940135?text=Olá, gostaria de mais informações sobre o produto/serviço."
       
@@ -91,10 +113,10 @@
       />
     </a>
     
-    <!-- fim botão WhatsApp -->
-  </button>  
+<!-- fim botão WhatsApp -->
+ </button>  
 
-    <!-- Div do formulário -->
+<!-- Div do formulário -->
   
     <div id="form-container">
       <form action="https://script.google.com/macros/s/AKfycbyehfEBhr4aFJwsJRmQxZa_JNH04Dcl69dObYevI0iqurQgVdo0gh2fk1T0pMwhn7kp/exec" method='POST'>
@@ -107,7 +129,7 @@
       </form>
     </div>    
 
-    <!-- Script para animação do formulário -->
+<!-- Script para animação do formulário -->
     <script>
       var botaoFlutuante = document.getElementById('botao-flutuante')
       var formContainer = document.getElementById('form-container')
@@ -117,11 +139,11 @@
       {       
         document.getElementById("enviar").addEventListener("click", function() {
 
-  // Obtenha os valores dos campos de nome e telefone do formulário
+// Obtenha os valores dos campos de nome e telefone do formulário
       var nome = document.getElementById("nome").value;
       var telefone = document.getElementById("telefone").value;
               
-  // Abra a janela do WhatsApp
+// Abra a janela do WhatsApp
   window.open("https://wa.me/+5551999940135");
     });        
 
