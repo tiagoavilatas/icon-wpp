@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>botão flutuante com formulário</title>
+    <title>botão flutuante com formulário enviando dados do formulário para planilha do google sheets via sheet monkeys</title>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
       
@@ -62,10 +62,10 @@
 
   <body>
     
-    <!-- Inicio botão Whatsapp - Tiago Tas - tasmb5@gmail.com - LP00-->
+    <!-- Inicio botão Whatsapp - Tiago @Tas - tasmb5@gmail.com -->
     <button class="botao-flutuante" id="botao-flutuante"
     
-      href="https://wa.me/+5551999940135?text=Olá, gostaria de mais informações sobre o produto/serviço."
+      href="https://wa.me/+55NUMERO_DO_TELEFONE_COM_DDI_?text=Olá, gostaria de mais informações sobre o produto/serviço."
       
     >
       <img
@@ -83,7 +83,7 @@
     <!-- Div do formulário -->
   
     <div id="form-container">
-      <form action="https://api.sheetmonkey.io/form/iDxz5ApJoL5YEuPEHDnND5" method="post">
+      <form action="LINK_DO_SHEETMONKEYS" method="post">
              
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" />
@@ -115,7 +115,7 @@
   // Envie os dados para o Google Sheets (código omitido por brevidade)
   
   // Abra a janela do WhatsApp
-  window.open("https://wa.me/+5551999940135");
+  window.open("https://wa.me/+55_NUMERO_DO_TELEFONE_COM_DDD");
     });        
 
       }
@@ -125,6 +125,3 @@
   
   </body>
 </html>
-
-
-
