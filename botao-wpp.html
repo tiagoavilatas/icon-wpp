@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!--Configuração do mediaquery-->
     
-    <title>botão flutuante com formulário</title>
+    <title>botão flutuante com formulário via script na planilha do google sheets</title>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js">
      </script>
     <style>
@@ -102,7 +102,7 @@
     
 <!-- Inicio botão Whatsapp -->
     <button class="botao-flutuante" id="botao-flutuante"    
-      href="https://wa.me/+5551999940135?text=Olá, gostaria de mais informações sobre o produto/serviço."
+      href="https://wa.me/+55_NUMERO_DO_TELEFONE_COM_DDD_?text=Olá, gostaria de mais informações sobre o produto/serviço."
       
     >
       <img
@@ -118,7 +118,7 @@
 <!-- Div do formulário -->
   
     <div id="form-container">
-      <form action="https://script.google.com/macros/s/AKfycbyehfEBhr4aFJwsJRmQxZa_JNH04Dcl69dObYevI0iqurQgVdo0gh2fk1T0pMwhn7kp/exec" method='POST'>
+      <form action="LINK_DA_IMPLEMENTAÇÃO_DO_GOOGLE_SHEETS" method='POST'> 
         <p style="font-family: Segoe UI; font-size: 18px; margin-top: 0px; color: white;">Olá! Preencha os campos para iniciar a conversa no WhatsApp</p>
         <input type="text" id="nome" name="nome" placeholder="Nome" style="font-family: Segoe UI; font-size: 16px;" required />
         <input type="tel" id="telefone" name="telefone" placeholder="Telefone" style="font-family: Segoe UI; font-size: 16px;" pattern="[0-9]{8,9}" required />
@@ -143,12 +143,9 @@
       var telefone = document.getElementById("telefone").value;
               
 // Abra a janela do WhatsApp
-  window.open("https://wa.me/+5551999940135");
+  window.open("https://wa.me/+55_NUMERO_DO_TELEFONE_COM_DDD_");
     });        
-
-    }   
-   
-
+    }    
     </script>  
   </body>
 </html>
